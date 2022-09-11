@@ -17,7 +17,9 @@ const changeTime = () => {
     // console.log(20 % 12);
     hour = hour ? hour : 12;
     hour = hour < 10 ? '0' + hour : hour;
+
     minute = minute < 10 ? '0' + minute : minute;
+    second = second < 10 ? '0' + second : second;
 
     // console.log(hour, minute, second);
     hours.textContent = hour;
@@ -26,4 +28,6 @@ const changeTime = () => {
     amPmSpan.textContent = amPm;
 }
 changeTime();
+
+setInterval(changeTime, 1000);
 
